@@ -39,25 +39,31 @@ def reg_trabajador():
     print('Has elegido la opción 1')
     print()
     nombre=input("Ingrese el nombre: ")
-    lista_trabajador.append(nombre)
+    
     apellido=input("Ingrese el apellido: ")
-    lista_trabajador.append(apellido)
+    
     cargo=input("Ingrese el cargo: ")
-    lista_trabajador.append(cargo)
+    
     sueldo=int(input("Ingrese su sueldo bruto: "))
-    lista_trabajador.append(sueldo)
+    
     desc_salud=round(sueldo*0.07)
-    lista_trabajador.append(desc_salud)
+    
     des_afp=round(sueldo*0.12)
-    lista_trabajador.append(des_afp)
+    lista_trabajador.append({
+        "Nombres: ": nombre+ "" + apellido,
+        "Cargo:": cargo,
+        "Sueldo: ": sueldo,
+        "Desc_Salud: ": desc_salud,
+        "Desc_AFP: ": des_afp
+        
+        })
     
 
 
 def listar_trabajador():
     print('Has elegido la opción 2')
     print()
-    print(f"Trabajadores: \n Nombres: {lista_trabajador[0]}\n Apellidos: {lista_trabajador[1]} ")
-    input()
+    print(lista_trabajador)
 
 
 def imprimir_trabajador():
